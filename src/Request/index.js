@@ -35,6 +35,7 @@ const debug = require('debug')('adonis:request')
 const SUBDOMAIN_OFFSET = 'app.http.subdomainOffset'
 const TRUST_PROXY = 'app.http.trustProxy'
 const SECRET = 'app.appKey'
+const ENCRYPT_COOKIES = 'app.encryptCookies'
 
 /**
  * A facade over Node.js HTTP `req` object, making it

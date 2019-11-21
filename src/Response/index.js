@@ -67,6 +67,7 @@ class AbortException extends GE.HttpException {
 }
 
 const SECRET = 'app.appKey'
+const ENCRYPT_COOKIES = 'app.encryptCookies'
 const JSONPCALLBACK = 'app.http.jsonpCallback'
 
 /**
