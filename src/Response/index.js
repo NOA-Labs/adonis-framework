@@ -547,7 +547,7 @@ class Response extends Macroable {
    * @return {void}
    */
   cookie (key, value, options = {}) {
-    nodeCookie.create(this.response, key, value, options, this.Config.get(SECRET), true)
+    nodeCookie.create(this.response, key, value, options, this.Config.get(SECRET), this.Config.get(ENCRYPT_COOKIES))
   }
 
   /**

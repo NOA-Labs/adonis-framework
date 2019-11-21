@@ -781,7 +781,7 @@ class Request extends Macroable {
    * @return {Object}
    */
   cookies () {
-    return nodeCookie.parse(this.request, this.Config.get(SECRET), true)
+    return nodeCookie.parse(this.request, this.Config.get(SECRET), this.Config.get(ENCRYPT_COOKIES))
   }
 
   /**
@@ -809,7 +809,7 @@ class Request extends Macroable {
    * @return {Mixed}
    */
   cookie (key, defaultValue) {
-    return _.defaultTo(nodeCookie.get(this.request, key, this.Config.get(SECRET), true), defaultValue)
+    return _.defaultTo(nodeCookie.get(this.request, key, this.Config.get(SECRET), this.Config.get(ENCRYPT_COOKIES)), defaultValue)
   }
 
   /**
